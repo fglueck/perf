@@ -1,2 +1,2 @@
-# php-perf
+# perf
 PHP performance measuring class
