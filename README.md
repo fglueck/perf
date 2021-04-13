@@ -1,6 +1,16 @@
 # perf
 PHP performance comparing measuring class.
 
+To generate a benchmark report:
+
+    $p = new perf();
+    $p->start();
+    for($i=100000;$i;$i--) { -- checking performance of strrpos
+        if(strrpos($string, ':'));
+    }
+    $p->stop('strrpos()');
+    $p->report();
+
 
 ## ->start() 
 init a new time measuring
