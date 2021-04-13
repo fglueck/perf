@@ -1,5 +1,6 @@
 # perf
-PHP performance measuring class
+PHP performance comparing measuring class.
+
 
 ## ->start() 
 init a new time measuring
