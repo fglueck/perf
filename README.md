@@ -3,11 +3,13 @@ PHP performance comparing measuring class.
 
 To generate a benchmark report:
 
-    $p = new perf(100000);
+    $p = new perf(100000);  # each test 100000 times
+    
     $p->test('strrpos()', function () {
        if(strrpos($string, ':'));
     );
-    echo $p->report();
+    
+    echo $p->report();  # output result
 
 or step by step:
 
@@ -41,3 +43,5 @@ Output sample:
     120.4% 0.44880s strpos()
     143.9% 0.53623s substr_compare()
     247.6% 0.92283s preg_match
+
+If the the results are too far apart and the runtime is very smal/fast, incrase itterations.
