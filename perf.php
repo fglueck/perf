@@ -25,7 +25,10 @@ class perf {
         $bench = current($this->times);
         foreach($this->times as $label => $time) {
             #$time = number_format($time, 5);
-            $out[] = sprintf("%0.1f%% %0.5fs %s\n", bcmul(bcdiv(sprintf('%1.30f',$time),sprintf('%1.30f', $bench),10),100, 10), $time, $label);
+            $out[] = sprintf("%0.1f%% %0.5fms %s\n"
+                             , bcmul(bcdiv(sprintf('%1.30f',$time),sprintf('%1.30f', $bench),10),100, 10)
+                             , bcmul($time,1000,10)
+                             , $label);
         }
         return implode("\n", $out);
     }
