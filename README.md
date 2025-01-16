@@ -7,7 +7,7 @@ To generate a benchmark report:
     $p->test('strrpos()', function () {
        if(strrpos($string, ':'));
     );
-    $p->report();
+    echo $p->report();
 
 or step by step:
 
@@ -19,11 +19,13 @@ or step by step:
     $p->stop('strrpos()');
     $p->report();
 
+## ->test('label', function(){})
+short for ->start(), any code, ->stop()
 
 ## ->start() 
 init a new time measuring
 
-## ->stap('label')
+## ->stop('label')
 stop measuring and set label for it
 
 ## ->report()
