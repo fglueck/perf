@@ -3,6 +3,14 @@ PHP performance comparing measuring class.
 
 To generate a benchmark report:
 
+    $p = new perf(100000);
+    $p->test('strrpos()', function () {
+       if(strrpos($string, ':'));
+    );
+    $p->report();
+
+or step by step:
+
     $p = new perf();
     $p->start();
     for($i=100000;$i;$i--) { -- checking performance of strrpos
@@ -22,7 +30,6 @@ stop measuring and set label for it
 generates the output
 
 Output sample:
-
 
     100.0% 0.37274s str_contains()
     104.6% 0.38981s strpos(+pos)
