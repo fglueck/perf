@@ -45,3 +45,4 @@ Output sample:
     247.6% 0.92283s preg_match
 
 If the the results are too far apart and the runtime is very smal/fast, incrase itterations.
+The first entry (100%) is the benchmark, so each other test is measured to this.
